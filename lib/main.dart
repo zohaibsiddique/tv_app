@@ -54,7 +54,7 @@ class _MyHomePageState extends State<MyHomePage> {
           children: [
             AnimatedOpacity(
                 opacity: opacityLevel,
-                duration: Duration(seconds: 1),
+                duration: Duration(seconds: 3),
                 child: Image.asset(
                   'assets/images/logo.png',
                 )),
@@ -77,7 +77,7 @@ class _MyHomePageState extends State<MyHomePage> {
     Timer.run(() {
       _changeOpacity();
     });
-    Timer(Duration(seconds: 1), () {
+    Timer(Duration(seconds: 3), () {
       Util.potUntil(context, MyApp.route);
       Util.navigate(context, HomeSC.route);
     });

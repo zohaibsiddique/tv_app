@@ -69,14 +69,14 @@ class ChannelList extends StatelessWidget {
   Widget build(BuildContext context) {
     return GridView.builder(
       gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-        crossAxisCount: 2,
+        crossAxisCount: 3,
       ),
       itemCount: photos.length,
       itemBuilder: (context, index) {
         return InkWell(
           child: FadeInImage.assetNetwork(
               placeholder: "assets/images/logo.png",
-              image: photos[index].logo??" "
+              image: photos[index].logo??""
           ),
           onTap: (){Util.navigateWidget(context, VideoPlayerSC(url: photos[index].url,));},
         );
